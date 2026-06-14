@@ -5,195 +5,316 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>블루베리 세척법</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+
 <style>
-body{
-  margin:0;
-  background:#F4FAFD;
-  font-family:Arial,sans-serif;
-  color:#222;
+*{
+  box-sizing:border-box;
 }
 
-.container{
-  max-width:520px;
+body{
+  margin:0;
+  background:#f3fbff;
+  color:#111;
+  font-family:'Noto Sans KR', sans-serif;
+}
+
+.wrap{
+  max-width:430px;
   margin:0 auto;
-  padding:20px;
+  padding:14px 16px 36px;
 }
 
 .notice{
-  background:#EEF2F5;
-  border-radius:30px;
-  padding:12px;
+  background:#edf5f9;
+  border-radius:22px;
   text-align:center;
-  color:#777;
-  font-size:12px;
-  margin-bottom:20px;
+  padding:10px 14px;
+  font-size:13px;
+  color:#333;
+  margin-bottom:14px;
 }
 
-.hero-img{
+.hero{
   width:100%;
-  border-radius:24px;
-  margin-bottom:30px;
+  height:170px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+  margin-bottom:24px;
 }
 
-.label{
+.tip{
   text-align:center;
-  color:#8DCFE8;
-  font-size:28px;
-  font-weight:bold;
+  color:#7fc4dc;
+  font-family:'Jua', sans-serif;
+  font-size:26px;
+  letter-spacing:2px;
+  margin-bottom:6px;
 }
 
 h1{
+  font-family:'Jua', sans-serif;
   text-align:center;
-  font-size:48px;
+  font-size:42px;
+  font-weight:400;
+  margin:0;
+  letter-spacing:1px;
 }
 
 .subtitle{
   text-align:center;
-  color:#666;
-  font-size:18px;
+  font-size:15px;
+  color:#555;
+  margin:12px 0 28px;
 }
 
 .secret-box{
-  background:#F3FBFF;
-  border:2px solid #A9DDF2;
-  border-radius:24px;
-  padding:35px 20px;
+  border:1.8px solid #9ed8ef;
+  background:#f6fcff;
+  border-radius:18px;
+  padding:24px 16px;
   text-align:center;
-  margin:35px 0;
+  margin-bottom:26px;
+}
+
+.secret-box h2{
+  font-family:'Jua', sans-serif;
+  font-size:27px;
+  font-weight:400;
+  margin:0 0 12px;
+}
+
+.secret-box p{
+  font-size:15px;
+  color:#444;
+  margin:0 0 16px;
 }
 
 .secret-btn{
   display:inline-block;
-  background:#49B6E9;
-  color:white;
+  background:#45b8e8;
+  color:#fff;
   text-decoration:none;
-  padding:16px 30px;
-  border-radius:14px;
-  font-size:22px;
-  font-weight:bold;
+  font-size:20px;
+  font-weight:800;
+  padding:13px 24px;
+  border-radius:9px;
 }
 
 .section-title{
-  font-size:32px;
+  font-family:'Jua', sans-serif;
+  font-size:29px;
+  font-weight:400;
+  margin:0 0 14px;
 }
 
 .recipe-box{
-  background:white;
-  border:2px solid #BFE3F4;
-  border-radius:24px;
-  padding:22px;
+  background:#fff;
+  border:1.8px solid #b9e2f4;
+  border-radius:17px;
+  padding:13px 16px;
+  margin-bottom:14px;
 }
 
 .step{
-  padding:16px 0;
-  border-bottom:1px dashed #CFE8F5;
-  font-size:17px;
-  line-height:1.7;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:13px 0;
+  border-bottom:1px dashed #cfe8f5;
+  font-size:15px;
+  line-height:1.55;
+}
+
+.step:last-child{
+  border-bottom:none;
 }
 
 .num{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  width:32px;
-  height:32px;
+  flex:0 0 28px;
+  width:28px;
+  height:28px;
   border-radius:50%;
-  background:#49B6E9;
-  color:white;
-  margin-right:10px;
-  font-weight:bold;
+  background:#3faed8;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:16px;
 }
 
-.recipe-box b{
-  color:#3BA9D8;
+.step b{
+  color:#2099c5;
+  font-weight:800;
 }
 
 .small{
-  color:#777;
-  font-size:14px;
+  display:block;
+  font-size:13px;
+  color:#555;
+  margin-top:4px;
 }
 
 .benefit-box{
   display:flex;
-  gap:10px;
-  margin-top:22px;
-  background:#F3FBFF;
-  border:2px solid #BFE3F4;
-  border-radius:24px;
-  padding:18px;
+  background:#f3fbff;
+  border:1.8px solid #b9e2f4;
+  border-radius:17px;
+  padding:15px 8px;
+  margin-bottom:16px;
 }
 
 .benefit{
   flex:1;
   text-align:center;
-  color:#3BA9D8;
-  font-size:16px;
-  line-height:1.5;
+  color:#2798c5;
+  font-weight:700;
+  font-size:14px;
+  line-height:1.45;
+  border-right:1px dashed #b9ddec;
+}
+
+.benefit:last-child{
+  border-right:none;
+}
+
+.benefit .emoji{
+  font-size:22px;
+  display:block;
+  margin-bottom:4px;
 }
 
 .share-box{
-  margin-top:22px;
-  background:white;
-  border:2px dashed #BFE3F4;
-  border-radius:24px;
-  padding:20px;
-  text-align:center;
+  background:#fff;
+  border:1.7px dashed #b9e2f4;
+  border-radius:16px;
+  padding:15px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.share-text{
+  flex:1;
+}
+
+.share-title{
+  font-weight:800;
+  font-size:16px;
+  margin-bottom:4px;
+}
+
+.share-sub{
+  font-size:12px;
+  color:#777;
+}
+
+.share-buttons{
+  display:flex;
+  gap:8px;
 }
 
 .share-buttons button{
   border:none;
-  border-radius:14px;
-  padding:13px 20px;
-  margin:6px;
-  font-size:16px;
-  font-weight:bold;
+  border-radius:10px;
+  font-weight:800;
+  font-size:14px;
+  padding:10px 14px;
+  cursor:pointer;
+  white-space:nowrap;
 }
 
 .kakao{
-  background:#FEE500;
+  background:#fee500;
+  color:#111;
 }
 
 .copy{
-  background:#eee;
+  background:#eeeeee;
+  color:#111;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
+<div class="wrap">
 
   <div class="notice">ⓘ 쿠팡 파트너스 활동의 일환으로, 수수료를 제공받습니다.</div>
 
-  <img class="hero-img" src=ChatGPT Image 2026년 6월 14일 오후 11_07_41.png alt="블루베리">
+  <img class="hero" src="blueberry.jpg" alt="블루베리">
 
-  <div class="label">TIP</div>
+  <div class="tip">TIP</div>
+
   <h1>블루베리 세척법</h1>
+
   <p class="subtitle">영양소 손실 없이 깨끗하게 씻는 방법 🫐</p>
 
   <div class="secret-box">
     <h2>🔒 비밀 재료 ⭐</h2>
     <p>이거 한 스푼이면 충분해요!</p>
-    <a href="쿠팡링크넣기" class="secret-btn">👉 비밀 재료 확인하기</a>
+    <a class="secret-btn" href=https://link.coupang.com/a/ezRNhZfZGm target="_blank">
+      👉 비밀 재료 확인하기
+    </a>
   </div>
 
   <h2 class="section-title">🧑‍🍳 세척 방법</h2>
 
   <div class="recipe-box">
-    <div class="step"><span class="num">1</span>미지근한 물을 큰 볼에 받아주세요.</div>
-    <div class="step"><span class="num">2</span><b>세척 재료 1작은술(물 1L 기준)</b>을 넣고 가볍게 녹여주세요.</div>
-    <div class="step"><span class="num">3</span>블루베리를 넣고 <b>30초~1분 정도만</b> 살살 흔들어주세요.<br><span class="small">오래 담그면 안토시아닌 성분이 빠져나가므로 주의!</span></div>
-    <div class="step"><span class="num">4</span>체에 받쳐 흐르는 물에 <b>빠르게</b> 헹궈주세요.</div>
-    <div class="step"><span class="num">5</span>키친타월로 물기를 제거해주세요.</div>
+
+    <div class="step">
+      <div class="num">1</div>
+      <div>미지근한 물을 큰 볼에 받아주세요.</div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div><b>세척 재료 1작은술(물 1L 기준)</b>을 넣고 가볍게 녹여주세요.</div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div>
+        블루베리를 넣고 <b>30초~1분 정도만</b> 살살 흔들어주세요.
+        <span class="small">오래 담그면 안토시아닌 성분이 빠져나가므로 주의!</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div>체에 받쳐 흐르는 물에 <b>빠르게</b> 헹궈주세요.</div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div>키친타월로 물기를 제거해주세요.</div>
+    </div>
+
   </div>
 
   <div class="benefit-box">
-    <div class="benefit">🫐<br>영양소 손실<br>최소화</div>
-    <div class="benefit">💧<br>이물질<br>제거</div>
-    <div class="benefit">✨<br>맛 변화 없이<br>깔끔하게 세척</div>
+    <div class="benefit">
+      <span class="emoji">🫐</span>
+      영양소 손실<br>최소화
+    </div>
+    <div class="benefit">
+      <span class="emoji">💧</span>
+      이물질<br>제거
+    </div>
+    <div class="benefit">
+      <span class="emoji">✨</span>
+      맛 변화 없이<br>깔끔하게 세척
+    </div>
   </div>
 
   <div class="share-box">
-    <b>💗 이 세척법 공유하기</b><br><br>
+    <div class="share-text">
+      <div class="share-title">💗 이 세척법 공유하기</div>
+      <div class="share-sub">친구들에게도 알려주세요!</div>
+    </div>
+
     <div class="share-buttons">
       <button class="kakao" onclick="sharePage()">카카오톡 공유</button>
       <button class="copy" onclick="copyLink()">링크 복사</button>
