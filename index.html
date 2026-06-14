@@ -46,11 +46,38 @@ body{
 
 .tip{
   text-align:center;
-  color:#7fc4dc;
-  font-family:'Jua', sans-serif;
-  font-size:26px;
-  letter-spacing:2px;
-  margin-bottom:6px;
+  color:#8fd0e7;
+  font-size:32px;
+  font-family:'Jua',sans-serif;
+  margin-bottom:15px;
+  position:relative;
+}
+
+.tip::before,
+.tip::after{
+  content:"";
+  display:inline-block;
+  width:18px;
+  height:16px;
+  vertical-align:middle;
+}
+
+.tip::before{
+  margin-right:12px;
+  background:
+    linear-gradient(#8fd0e7,#8fd0e7) 0 0/12px 2px no-repeat,
+    linear-gradient(#8fd0e7,#8fd0e7) 3px 6px/15px 2px no-repeat,
+    linear-gradient(#8fd0e7,#8fd0e7) 0 12px/12px 2px no-repeat;
+  transform:rotate(-30deg);
+}
+
+.tip::after{
+  margin-left:12px;
+  background:
+    linear-gradient(#8fd0e7,#8fd0e7) 0 0/12px 2px no-repeat,
+    linear-gradient(#8fd0e7,#8fd0e7) 0 6px/15px 2px no-repeat,
+    linear-gradient(#8fd0e7,#8fd0e7) 0 12px/12px 2px no-repeat;
+  transform:rotate(30deg);
 }
 
 h1{
